@@ -1,13 +1,13 @@
-import { Play, BookOpen, FileText, Smartphone, Star } from 'lucide-react';
+import { Play, BookOpen, FileText, Smartphone, Star, Users } from 'lucide-react';
 import studentImage from '@/assets/student-hero.jpg';
 import appMockup1 from '@/assets/app-mockup-1.png';
 import appMockup2 from '@/assets/app-mockup-2.png';
 
 const HeroSection = () => {
   const topLectures = [
-    { title: 'مراجعة الرياضيات النهائية', teacher: 'أ. محمد أحمد', rating: 4.9 },
-    { title: 'شرح الفيزياء - الكهربية', teacher: 'أ. سارة علي', rating: 4.8 },
-    { title: 'الكيمياء العضوية', teacher: 'أ. أحمد حسن', rating: 4.9 },
+    { title: 'مراجعة الرياضيات النهائية', chapter: 'الباب الأول', rating: 4.9 },
+    { title: 'شرح التفاضل والتكامل', chapter: 'الباب الثاني', rating: 4.8 },
+    { title: 'حل نماذج الامتحانات', chapter: 'مراجعة شاملة', rating: 4.9 },
   ];
 
   return (
@@ -18,29 +18,30 @@ const HeroSection = () => {
           <div className="order-2 lg:order-1 text-center lg:text-right">
             <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
               <span className="text-primary font-semibold text-sm">
-                🎓 منصة تعليمية متكاملة للثانوية العامة
+                🎓 منصتك التعليمية المخصصة للثانوية العامة
               </span>
             </div>
             
             <h1 className="heading-1 mb-6">
-              منصتك الذكية للتعلم مع{' '}
-              <span className="text-primary">أفضل المعلمين</span>
-              {' '}في الثانوية
+              تعلّم مع{' '}
+              <span className="text-primary">معلمك الخاص</span>
+              {' '}بطريقة مميزة ومنظمة
             </h1>
             
             <p className="text-body mb-8 max-w-xl mx-auto lg:mx-0">
-              معلمي يربط بين المعلمين المتميزين وطلاب المرحلة الثانوية، ليوفر محتوى 
-              تعليمي منظم، موثوق، وسهل الوصول من أي مكان عبر الويب وتطبيق الجوال.
+              منصة معلمي مصممة خصيصاً لطلاب المرحلة الثانوية، توفر لك محتوى تعليمي 
+              عالي الجودة، منظم حسب المنهج، وسهل الوصول من أي مكان عبر الويب وتطبيق الجوال.
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <a href="#register-student" className="btn-accent inline-flex items-center justify-center gap-2">
                 <Play size={20} />
-                ابدأ الآن كطالب
+                ابدأ التعلم الآن
               </a>
-              <a href="#register-teacher" className="btn-secondary inline-flex items-center justify-center gap-2">
-                سجّل كمعلم
+              <a href="#grades" className="btn-secondary inline-flex items-center justify-center gap-2">
+                <Users size={20} />
+                اختر صفك الدراسي
               </a>
             </div>
             
@@ -94,7 +95,7 @@ const HeroSection = () => {
                       <div className="flex justify-between items-start">
                         <div>
                           <p className="font-medium text-foreground text-sm">{lecture.title}</p>
-                          <p className="text-muted-foreground text-xs">{lecture.teacher}</p>
+                          <p className="text-muted-foreground text-xs">{lecture.chapter}</p>
                         </div>
                         <div className="flex items-center gap-1 text-accent">
                           <Star size={14} className="fill-current" />
