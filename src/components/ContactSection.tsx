@@ -7,7 +7,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    userType: 'student',
+    grade: 'first',
     message: '',
   });
 
@@ -17,7 +17,7 @@ const ContactSection = () => {
       title: 'تم إرسال رسالتك بنجاح!',
       description: 'سنتواصل معك في أقرب وقت ممكن.',
     });
-    setFormData({ name: '', email: '', userType: 'student', message: '' });
+    setFormData({ name: '', email: '', grade: 'first', message: '' });
   };
 
   return (
@@ -68,16 +68,16 @@ const ContactSection = () => {
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  نوع المستخدم
+                  الصف الدراسي
                 </label>
                 <select
-                  value={formData.userType}
-                  onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
+                  value={formData.grade}
+                  onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 >
-                  <option value="student">طالب</option>
-                  <option value="teacher">معلم</option>
-                  <option value="other">أخرى</option>
+                  <option value="first">أولى ثانوي</option>
+                  <option value="second">ثانية ثانوي</option>
+                  <option value="third">ثالثة ثانوي</option>
                 </select>
               </div>
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                  placeholder="اكتب رسالتك هنا..."
+                  placeholder="اكتب رسالتك أو استفسارك هنا..."
                 />
               </div>
 
@@ -107,7 +107,7 @@ const ContactSection = () => {
             <div className="mb-8">
               <h3 className="heading-3 mb-4">تابعنا على وسائل التواصل</h3>
               <p className="text-muted-foreground mb-6">
-                تابع آخر الأخبار والتحديثات على صفحاتنا الرسمية
+                تابع آخر الأخبار والمحتوى الجديد على صفحاتنا الرسمية
               </p>
               <div className="flex gap-4">
                 <a
@@ -135,7 +135,7 @@ const ContactSection = () => {
             </div>
 
             <div className="card-elevated p-6 bg-primary/5">
-              <h4 className="font-bold text-foreground mb-2">ساعات العمل</h4>
+              <h4 className="font-bold text-foreground mb-2">ساعات الدعم</h4>
               <p className="text-muted-foreground">
                 السبت - الخميس: 9 صباحاً - 9 مساءً
               </p>

@@ -16,9 +16,9 @@ const Header = () => {
 
   const navItems = [
     { label: 'الرئيسية', href: '#home' },
-    { label: 'للطلاب', href: '#students' },
-    { label: 'للمعلمين', href: '#teachers' },
-    { label: 'عن المنصة', href: '#about' },
+    { label: 'المميزات', href: '#students' },
+    { label: 'الصفوف الدراسية', href: '#grades' },
+    { label: 'كيف يعمل', href: '#about' },
     { label: 'تواصل معنا', href: '#contact' },
   ];
 
@@ -53,11 +53,11 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#register-teacher" className="btn-secondary text-sm">
-              انضم كمعلم
+            <a href="#contact" className="btn-secondary text-sm">
+              تواصل معنا
             </a>
             <a href="#register-student" className="btn-primary text-sm">
-              سجّل كطالب
+              سجّل الآن
             </a>
           </div>
 
@@ -87,11 +87,11 @@ const Header = () => {
                 </li>
               ))}
               <li className="px-4 pt-4 flex flex-col gap-2">
-                <a href="#register-teacher" className="btn-secondary text-center text-sm">
-                  انضم كمعلم
+                <a href="#contact" className="btn-secondary text-center text-sm">
+                  تواصل معنا
                 </a>
                 <a href="#register-student" className="btn-primary text-center text-sm">
-                  سجّل كطالب
+                  سجّل الآن
                 </a>
               </li>
             </ul>

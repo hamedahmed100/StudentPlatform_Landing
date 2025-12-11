@@ -15,9 +15,9 @@ const TestimonialsSection = () => {
       rating: 5,
     },
     {
-      name: 'أ. كريم حسن',
-      role: 'معلم رياضيات',
-      content: 'منصة معلمي وفّرت لي فرصة للوصول لطلاب أكثر وتحقيق دخل إضافي. لوحة التحكم سهلة ومتابعة المبيعات ممتازة.',
+      name: 'أحمد خالد',
+      role: 'طالب في أولى ثانوي',
+      content: 'أفضل منصة للمذاكرة! الشروحات بسيطة وواضحة والمذكرات مفيدة جداً. أنصح كل زملائي بالاشتراك.',
       rating: 5,
     },
   ];
@@ -27,11 +27,11 @@ const TestimonialsSection = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <span className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
-            آراء المستخدمين
+            آراء الطلاب
           </span>
-          <h2 className="heading-2 mb-4">ماذا يقول مستخدمونا؟</h2>
+          <h2 className="heading-2 mb-4">ماذا يقول طلابنا؟</h2>
           <p className="text-body max-w-2xl mx-auto">
-            تجارب حقيقية من طلاب ومعلمين يستخدمون منصة معلمي
+            تجارب حقيقية من طلاب يستخدمون منصة معلمي
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
               </div>
               
               <p className="text-foreground mb-6 leading-relaxed">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               
               <div className="border-t border-border pt-4">
