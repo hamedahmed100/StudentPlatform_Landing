@@ -6,13 +6,9 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   // GitHub Pages base path configuration
-  // For project pages: use '/repository-name/'
-  // For user/organization pages (root): use '/'
-  // Change this to match your repository name or use '/' for root
-  const repositoryName = 'StudentPlatform_Landing'; // Change this to your repo name
-  const base = process.env.NODE_ENV === 'production' 
-    ? `/${repositoryName}/` 
-    : '/';
+  // Since you're using hamedahmed100.github.io (root domain), use '/'
+  // For project pages (subdirectory): use '/repository-name/'
+  const base = '/';
 
   return {
     base,
