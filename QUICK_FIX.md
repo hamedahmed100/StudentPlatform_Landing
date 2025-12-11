@@ -83,3 +83,4 @@ The error occurs because:
 
 The fix ensures GitHub Pages serves the **built** files from the `dist` folder, not the source files.
 
+
