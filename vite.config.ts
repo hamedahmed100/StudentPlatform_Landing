@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   // GitHub Pages base path configuration
   // For project pages (subdirectory): use '/repository-name/'
   // For user/organization pages (root domain): use '/'
-  // Change this to match your repository name or set to '/' for root domain
+  // IMPORTANT: This must match REPOSITORY_NAME in src/config/base-path.ts
   const repositoryName = 'StudentPlatform_Landing';
   const base = repositoryName ? `/${repositoryName}/` : '/';
 
