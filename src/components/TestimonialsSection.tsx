@@ -23,37 +23,37 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="section-padding bg-secondary/30">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <span className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
+        <div className="text-center mb-20 lg:mb-24">
+          <span className="inline-block mb-5 px-5 py-2.5 bg-primary/10 rounded-full text-primary font-semibold text-sm sm:text-base">
             آراء الطلاب
           </span>
-          <h2 className="heading-2 mb-4">ماذا يقول طلابنا؟</h2>
-          <p className="text-body max-w-2xl mx-auto">
+          <h2 className="heading-2 mb-6 lg:mb-8">ماذا يقول طلابنا؟</h2>
+          <p className="text-body max-w-3xl mx-auto text-lg sm:text-xl">
             تجارب حقيقية من طلاب يستخدمون منصة معلمي
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card-elevated p-8 relative">
-              <Quote className="absolute top-4 left-4 w-10 h-10 text-primary/10" />
+            <div key={index} className="card-elevated p-8 lg:p-10 relative">
+              <Quote className="absolute top-6 left-6 w-12 h-12 text-primary/10" />
               
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-accent fill-accent" />
+                  <Star key={i} className="w-6 h-6 text-accent fill-accent" />
                 ))}
               </div>
               
-              <p className="text-foreground mb-6 leading-relaxed">
+              <p className="text-foreground mb-8 text-base lg:text-lg leading-relaxed">
                 &quot;{testimonial.content}&quot;
               </p>
               
-              <div className="border-t border-border pt-4">
-                <p className="font-bold text-foreground">{testimonial.name}</p>
-                <p className="text-muted-foreground text-sm">{testimonial.role}</p>
+              <div className="border-t border-border pt-6">
+                <p className="font-bold text-foreground text-lg lg:text-xl">{testimonial.name}</p>
+                <p className="text-muted-foreground text-base lg:text-lg mt-1">{testimonial.role}</p>
               </div>
             </div>
           ))}

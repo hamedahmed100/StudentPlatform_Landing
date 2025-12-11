@@ -34,30 +34,30 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="section-padding bg-background">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <span className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm">
+        <div className="text-center mb-20 lg:mb-24">
+          <span className="inline-block mb-5 px-5 py-2.5 bg-primary/10 rounded-full text-primary font-semibold text-sm sm:text-base">
             الأسئلة الشائعة
           </span>
-          <h2 className="heading-2 mb-4">هل لديك سؤال؟</h2>
-          <p className="text-body max-w-2xl mx-auto">
+          <h2 className="heading-2 mb-6 lg:mb-8">هل لديك سؤال؟</h2>
+          <p className="text-body max-w-3xl mx-auto text-lg sm:text-xl">
             إليك إجابات لأكثر الأسئلة شيوعاً. لم تجد إجابتك؟ تواصل معنا!
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-5 lg:space-y-6">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="card-elevated px-6 border-none"
+                className="card-elevated px-6 lg:px-8 border-none"
               >
-                <AccordionTrigger className="text-right font-semibold hover:no-underline py-6">
+                <AccordionTrigger className="text-right font-semibold hover:no-underline py-6 lg:py-8 text-base lg:text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-6 lg:pb-8 leading-relaxed text-base lg:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
